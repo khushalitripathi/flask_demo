@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}User Registration Form{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  <form method="post">
+    <label for="username">Username: </label>
+    <input name="username" id="username" required><br><br>
+    <label for="address">Address: </label><br>
+    <textarea name="address" id="address" rows="5" cols="33" required></textarea><br><br>
+    <label for="marital_status">Marital Status: </label>
+    <input type="radio" name="marital_status" id="unmarried" value="unmarried" checked> Unmarried </input>
+    <input type="radio" name="marital_status" id="married" value="married"> Married </input>
+	<input type="radio" name="marital_status" id="widow" value="widow"> Widow </input>
+	<input type="radio" name="marital_status" id="divorced" value="divorced"> Divorced </input><br><br>
+	<label for="salary">Salary (per annum): </label>
+    <input name="salary" id="salary" required><br><br>
+    <input type="submit" value="Register">
+  </form>
+{% endblock %}

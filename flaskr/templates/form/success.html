@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}List of Registered Users:{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+<table>
+	<tr>
+    <th>Id</th>
+    <th>Username</th>
+    <th>Address</th>
+    <th>Marital Status</th>
+    <th>Salary</th>
+  </tr>
+{% for item in items %}
+    <tr>
+        <td>{{ item[0] }}</td>
+        <td>{{ item[1] }}</td>
+        <td>{{ item[2] }}</td>
+        <td>{{ item[3] }}</td>
+        <td>{{ item[4] }}</td>
+    </td>
+{% endfor %}
+
+{% endblock %}
